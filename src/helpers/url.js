@@ -1,0 +1,1 @@
+export const url = 'https://back-sprint2.herokuapp.com/registros/'
