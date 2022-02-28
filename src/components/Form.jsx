@@ -33,12 +33,6 @@ export const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-       
-
-        setTimeout(() => {
-            navigate('/login')
-        // (window.location.href = "/login")
-        }, 1000)
     }
 
     const postUser = () => {
@@ -51,6 +45,11 @@ export const Form = () => {
             })
 
             alert("Tu usuario se ha registrado")
+            
+        setTimeout(() => {
+            navigate('/login')
+        // (window.location.href = "/login")
+        }, 1000)
     }
 
 
