@@ -1,10 +1,13 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { url } from '../helpers/url';
+import { useNavigate } from 'react-router-dom'
 import '../styles/FormStyle.css'
 
 
 export const Form = () => {
+
+    const navigate = useNavigate()
 
     const [register, setRegister] = useState(
 
@@ -30,11 +33,12 @@ export const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        alert("Tu usuario se ha registrado")
+       
 
         setTimeout(() => {
-            (window.location.href = "/login")
-        }, 1500)
+            navigate('/login')
+        // (window.location.href = "/login")
+        }, 1000)
     }
 
     const postUser = () => {
@@ -45,6 +49,8 @@ export const Form = () => {
             }).catch(error => {
                 console.log(error);
             })
+
+            alert("Tu usuario se ha registrado")
     }
 
 

@@ -12,7 +12,6 @@ import {
   DivLink,
   Input,
   Separator,
-  ButtonGoogle,
   DivForm
 } from "../styles/styleAuth";
 import { Button } from "react-bootstrap";
@@ -23,6 +22,7 @@ const cookies = new Cookies();
 const Login = () => {
 
   const navigate = useNavigate()
+  
   const [form, setForm] = useState( {
       email: '',
       password: ''
@@ -56,7 +56,7 @@ const Login = () => {
               cookies.set('email', respuesta.email, {path: "/"});
               alert(`¡ Bienvenid@, ${respuesta.nombre} !`);
               navigate('/home');
-              //window.location.href="/RetoFinal-Sprint2/home";
+              //window.location.href="/home";
           }else{
               alert('Correo o contraseña incorrectos');
           }
@@ -82,9 +82,9 @@ const Login = () => {
       
      
       <DivForm>
-        <ButtonGoogle>
+      
           <img src="https://i.ibb.co/XC3nx0B/Buttons.png" alt="google" />
-          Continuar con Google</ButtonGoogle>
+          
         <Separator />
 
         <Form action="" >
@@ -100,7 +100,7 @@ const Login = () => {
               required
             />
           </Label>
-
+        <br></br>
           <Label htmlFor="inputPassword">
             Contraseña
             <Input
@@ -112,7 +112,7 @@ const Login = () => {
               required
             />
           </Label>
-
+          <br></br>
           <Button variant="success"  onClick={iniciarSesion}>Iniciar Sesion</Button>
         </Form>
       </DivForm>

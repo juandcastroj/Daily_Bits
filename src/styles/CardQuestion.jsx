@@ -34,9 +34,10 @@ export const DivForm = styled.div`
 
 
 export const Titulo = styled.h2`
-    padding: 1rem;
+    padding: 0.6rem;
     text-align: center;
     margin: 0;
+    font-size: 20px
 `
 export const RadioStyle = styled(Form.Check)`
     text-align: center;
@@ -56,11 +57,11 @@ export const RadioStyle = styled(Form.Check)`
 export const ButtonStyle = styled(Button)`
     background-color: #7F5AF0;
     border:none;
-    margin-left: 10%;
-    width: 70%;
+    margin-left: 20%;
+    width: 60%;
     font-size: 1.4rem;
     font-weight: 500;
-    padding: 1rem;
+    padding: 0.8rem;
     border-radius: 20px;
     &:hover{
         background-color: gray;
